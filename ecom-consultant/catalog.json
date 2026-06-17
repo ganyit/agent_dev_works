@@ -1,0 +1,875 @@
+[
+  {
+    "id": "P001",
+    "title": "Neutrogena Ultra Sheer Sunscreen SPF 50+",
+    "category": "travel",
+    "subcategory": "sun_protection",
+    "price": 349,
+    "attributes": {
+      "volume_ml": 88,
+      "spf": 50,
+      "water_resistant": true,
+      "skin_type": "all"
+    },
+    "tags": [
+      "sunscreen",
+      "sun protection",
+      "beach",
+      "summer"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P001",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P002",
+    "title": "Lakme Sun Expert SPF 30 Sunscreen",
+    "category": "travel",
+    "subcategory": "sun_protection",
+    "price": 189,
+    "attributes": {
+      "volume_ml": 60,
+      "spf": 30,
+      "water_resistant": false,
+      "skin_type": "normal"
+    },
+    "tags": [
+      "sunscreen",
+      "sun protection",
+      "budget",
+      "everyday"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P002",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P003",
+    "title": "Dettol Hand Sanitizer 500ml",
+    "category": "travel",
+    "subcategory": "hygiene",
+    "price": 149,
+    "attributes": {
+      "volume_ml": 500,
+      "alcohol_percent": 70,
+      "fragrance": "lemon"
+    },
+    "tags": [
+      "hand sanitizer",
+      "hygiene",
+      "travel",
+      "health"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P003",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P004",
+    "title": "Purell Advanced Hand Sanitizer 100ml (Travel Size)",
+    "category": "travel",
+    "subcategory": "hygiene",
+    "price": 99,
+    "attributes": {
+      "volume_ml": 100,
+      "alcohol_percent": 70,
+      "travel_size": true
+    },
+    "tags": [
+      "hand sanitizer",
+      "travel size",
+      "hygiene",
+      "pocket"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P004",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P005",
+    "title": "Fastrack UV-Protected Sunglasses",
+    "category": "accessories",
+    "subcategory": "eyewear",
+    "price": 599,
+    "attributes": {
+      "uv_protection": "UV400",
+      "frame": "plastic",
+      "lens_color": "brown"
+    },
+    "tags": [
+      "sunglasses",
+      "uv protection",
+      "beach",
+      "summer",
+      "accessories"
+    ],
+    "image_url": "https://placehold.co/200x200/F59E0B/ffffff?text=P005",
+    "emoji": "🕶️"
+  },
+  {
+    "id": "P006",
+    "title": "Polaroid Polarized Sunglasses",
+    "category": "accessories",
+    "subcategory": "eyewear",
+    "price": 1299,
+    "attributes": {
+      "uv_protection": "UV400",
+      "polarized": true,
+      "frame": "metal"
+    },
+    "tags": [
+      "sunglasses",
+      "polarized",
+      "premium",
+      "beach",
+      "summer"
+    ],
+    "image_url": "https://placehold.co/200x200/F59E0B/ffffff?text=P006",
+    "emoji": "🕶️"
+  },
+  {
+    "id": "P007",
+    "title": "Vega Travel Toiletry Kit (9-piece)",
+    "category": "travel",
+    "subcategory": "toiletries",
+    "price": 449,
+    "attributes": {
+      "pieces": 9,
+      "includes": [
+        "comb",
+        "nail clipper",
+        "scissors",
+        "tweezers",
+        "mirror",
+        "pouch"
+      ],
+      "tsa_approved": true
+    },
+    "tags": [
+      "toiletry kit",
+      "travel kit",
+      "grooming",
+      "essentials"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P007",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P008",
+    "title": "Mi Power Bank 3i 20000mAh",
+    "category": "electronics",
+    "subcategory": "power",
+    "price": 1299,
+    "attributes": {
+      "capacity_mah": 20000,
+      "ports": 3,
+      "fast_charge": true,
+      "weight_g": 440
+    },
+    "tags": [
+      "power bank",
+      "charger",
+      "electronics",
+      "travel",
+      "portable"
+    ],
+    "image_url": "https://placehold.co/200x200/10B981/ffffff?text=P008",
+    "emoji": "🔋"
+  },
+  {
+    "id": "P009",
+    "title": "Ambrane 10000mAh Slim Power Bank",
+    "category": "electronics",
+    "subcategory": "power",
+    "price": 699,
+    "attributes": {
+      "capacity_mah": 10000,
+      "ports": 2,
+      "fast_charge": false,
+      "weight_g": 210
+    },
+    "tags": [
+      "power bank",
+      "budget",
+      "slim",
+      "travel",
+      "portable"
+    ],
+    "image_url": "https://placehold.co/200x200/10B981/ffffff?text=P009",
+    "emoji": "🔋"
+  },
+  {
+    "id": "P010",
+    "title": "LDNIO Universal Travel Adapter (150 countries)",
+    "category": "electronics",
+    "subcategory": "adapters",
+    "price": 799,
+    "attributes": {
+      "countries_supported": 150,
+      "usb_ports": 4,
+      "input_voltage": "100-240V"
+    },
+    "tags": [
+      "universal adapter",
+      "travel adapter",
+      "international",
+      "electronics"
+    ],
+    "image_url": "https://placehold.co/200x200/10B981/ffffff?text=P010",
+    "emoji": "🔋"
+  },
+  {
+    "id": "P011",
+    "title": "Johnson's First Aid Kit (25 pieces)",
+    "category": "health",
+    "subcategory": "first_aid",
+    "price": 299,
+    "attributes": {
+      "pieces": 25,
+      "includes": [
+        "bandages",
+        "antiseptic wipes",
+        "gauze",
+        "medical tape",
+        "scissors"
+      ]
+    },
+    "tags": [
+      "first aid kit",
+      "health",
+      "safety",
+      "travel",
+      "emergency"
+    ],
+    "image_url": "https://placehold.co/200x200/EF4444/ffffff?text=P011",
+    "emoji": "💊"
+  },
+  {
+    "id": "P012",
+    "title": "Odomos Mosquito Repellent Cream 50g",
+    "category": "health",
+    "subcategory": "insect_repellent",
+    "price": 89,
+    "attributes": {
+      "weight_g": 50,
+      "protection_hours": 8,
+      "deet_free": true
+    },
+    "tags": [
+      "insect repellent",
+      "mosquito repellent",
+      "outdoor",
+      "health",
+      "tropical"
+    ],
+    "image_url": "https://placehold.co/200x200/EF4444/ffffff?text=P012",
+    "emoji": "💊"
+  },
+  {
+    "id": "P013",
+    "title": "Godrej Aer Insect Repellent Spray 200ml",
+    "category": "health",
+    "subcategory": "insect_repellent",
+    "price": 149,
+    "attributes": {
+      "volume_ml": 200,
+      "protection_hours": 6,
+      "spray_type": "aerosol"
+    },
+    "tags": [
+      "insect repellent",
+      "spray",
+      "mosquito",
+      "outdoor",
+      "health"
+    ],
+    "image_url": "https://placehold.co/200x200/EF4444/ffffff?text=P013",
+    "emoji": "💊"
+  },
+  {
+    "id": "P014",
+    "title": "Milton Stainless Steel Water Bottle 1L",
+    "category": "travel",
+    "subcategory": "hydration",
+    "price": 399,
+    "attributes": {
+      "capacity_ml": 1000,
+      "material": "stainless_steel",
+      "insulated": true,
+      "hours_cold": 24
+    },
+    "tags": [
+      "water bottle",
+      "reusable",
+      "hydration",
+      "travel",
+      "eco-friendly"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P014",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P015",
+    "title": "Cello H2O Plastic Water Bottle 750ml",
+    "category": "travel",
+    "subcategory": "hydration",
+    "price": 149,
+    "attributes": {
+      "capacity_ml": 750,
+      "material": "BPA-free plastic",
+      "insulated": false
+    },
+    "tags": [
+      "water bottle",
+      "budget",
+      "lightweight",
+      "travel",
+      "hydration"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P015",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P016",
+    "title": "Vama Beach Towel Microfibre 150x80cm",
+    "category": "travel",
+    "subcategory": "beach",
+    "price": 499,
+    "attributes": {
+      "dimensions": "150x80cm",
+      "material": "microfibre",
+      "quick_dry": true,
+      "sand_resistant": true
+    },
+    "tags": [
+      "beach towel",
+      "microfibre",
+      "quick dry",
+      "beach",
+      "summer",
+      "travel"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P016",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P017",
+    "title": "Cabeau Evolution Classic Travel Pillow",
+    "category": "travel",
+    "subcategory": "comfort",
+    "price": 1499,
+    "attributes": {
+      "material": "memory_foam",
+      "inflatable": false,
+      "machine_washable": true
+    },
+    "tags": [
+      "travel pillow",
+      "neck pillow",
+      "comfort",
+      "flight",
+      "long journey"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P017",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P018",
+    "title": "Generic Inflatable Travel Neck Pillow",
+    "category": "travel",
+    "subcategory": "comfort",
+    "price": 299,
+    "attributes": {
+      "material": "PVC",
+      "inflatable": true,
+      "compact": true
+    },
+    "tags": [
+      "travel pillow",
+      "neck pillow",
+      "budget",
+      "inflatable",
+      "compact"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P018",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P019",
+    "title": "Safari Polycarbonate Trolley Bag 55cm (Cabin)",
+    "category": "luggage",
+    "subcategory": "trolley",
+    "price": 2999,
+    "attributes": {
+      "size_cm": 55,
+      "material": "polycarbonate",
+      "wheels": 4,
+      "tsa_lock": true,
+      "cabin_approved": true
+    },
+    "tags": [
+      "cabin bag",
+      "trolley",
+      "luggage",
+      "travel",
+      "hand baggage"
+    ],
+    "image_url": "https://placehold.co/200x200/8B5CF6/ffffff?text=P019",
+    "emoji": "👜"
+  },
+  {
+    "id": "P020",
+    "title": "American Tourister Spinner 68cm Check-in Bag",
+    "category": "luggage",
+    "subcategory": "trolley",
+    "price": 5499,
+    "attributes": {
+      "size_cm": 68,
+      "material": "polycarbonate",
+      "wheels": 4,
+      "tsa_lock": true,
+      "cabin_approved": false
+    },
+    "tags": [
+      "check-in bag",
+      "trolley",
+      "luggage",
+      "travel",
+      "large bag"
+    ],
+    "image_url": "https://placehold.co/200x200/8B5CF6/ffffff?text=P020",
+    "emoji": "👜"
+  },
+  {
+    "id": "P021",
+    "title": "Skybags Polyester Backpack 30L",
+    "category": "luggage",
+    "subcategory": "backpack",
+    "price": 1299,
+    "attributes": {
+      "capacity_litres": 30,
+      "laptop_compartment": true,
+      "usb_port": true
+    },
+    "tags": [
+      "backpack",
+      "daypack",
+      "travel",
+      "adventure",
+      "laptop bag"
+    ],
+    "image_url": "https://placehold.co/200x200/8B5CF6/ffffff?text=P021",
+    "emoji": "👜"
+  },
+  {
+    "id": "P022",
+    "title": "Wildcraft Rucksack 45L",
+    "category": "luggage",
+    "subcategory": "backpack",
+    "price": 2199,
+    "attributes": {
+      "capacity_litres": 45,
+      "rain_cover": true,
+      "back_support": true,
+      "trekking": true
+    },
+    "tags": [
+      "rucksack",
+      "trekking",
+      "adventure",
+      "hiking",
+      "outdoor",
+      "backpack"
+    ],
+    "image_url": "https://placehold.co/200x200/8B5CF6/ffffff?text=P022",
+    "emoji": "👜"
+  },
+  {
+    "id": "P023",
+    "title": "UrbanTrek Waterproof Rain Jacket",
+    "category": "clothing",
+    "subcategory": "outerwear",
+    "price": 1799,
+    "attributes": {
+      "waterproof": true,
+      "windproof": true,
+      "packable": true,
+      "gender": "unisex"
+    },
+    "tags": [
+      "rain jacket",
+      "waterproof",
+      "outdoor",
+      "adventure",
+      "trekking",
+      "monsoon"
+    ],
+    "image_url": "https://placehold.co/200x200/06B6D4/ffffff?text=P023",
+    "emoji": "👕"
+  },
+  {
+    "id": "P024",
+    "title": "Thermal Inner Wear Set (Top + Bottom)",
+    "category": "clothing",
+    "subcategory": "thermals",
+    "price": 799,
+    "attributes": {
+      "pieces": 2,
+      "material": "polyester blend",
+      "temperature_rating": "below 10°C"
+    },
+    "tags": [
+      "thermals",
+      "thermal wear",
+      "cold weather",
+      "winter",
+      "mountain",
+      "trek"
+    ],
+    "image_url": "https://placehold.co/200x200/06B6D4/ffffff?text=P024",
+    "emoji": "👕"
+  },
+  {
+    "id": "P025",
+    "title": "Himalayan Woolen Gloves",
+    "category": "clothing",
+    "subcategory": "accessories",
+    "price": 349,
+    "attributes": {
+      "material": "wool blend",
+      "touchscreen_compatible": true
+    },
+    "tags": [
+      "gloves",
+      "winter",
+      "cold weather",
+      "mountain",
+      "trek",
+      "himalayan"
+    ],
+    "image_url": "https://placehold.co/200x200/06B6D4/ffffff?text=P025",
+    "emoji": "👕"
+  },
+  {
+    "id": "P026",
+    "title": "Quechua Fleece Jacket",
+    "category": "clothing",
+    "subcategory": "outerwear",
+    "price": 1299,
+    "attributes": {
+      "material": "polyester fleece",
+      "packable": true,
+      "temperature_rating": "5-15°C"
+    },
+    "tags": [
+      "fleece jacket",
+      "outdoor",
+      "trekking",
+      "cold weather",
+      "lightweight"
+    ],
+    "image_url": "https://placehold.co/200x200/06B6D4/ffffff?text=P026",
+    "emoji": "👕"
+  },
+  {
+    "id": "P027",
+    "title": "Zara Dry-Fit T-Shirt (Pack of 3)",
+    "category": "clothing",
+    "subcategory": "tops",
+    "price": 699,
+    "attributes": {
+      "pieces": 3,
+      "material": "polyester",
+      "quick_dry": true,
+      "gender": "unisex"
+    },
+    "tags": [
+      "t-shirt",
+      "dry fit",
+      "travel",
+      "quick dry",
+      "casual",
+      "clothing"
+    ],
+    "image_url": "https://placehold.co/200x200/06B6D4/ffffff?text=P027",
+    "emoji": "👕"
+  },
+  {
+    "id": "P028",
+    "title": "Comfy Compression Travel Socks (3 pairs)",
+    "category": "clothing",
+    "subcategory": "socks",
+    "price": 349,
+    "attributes": {
+      "pairs": 3,
+      "compression": true,
+      "anti_blister": true
+    },
+    "tags": [
+      "socks",
+      "travel socks",
+      "compression",
+      "flight",
+      "long journey"
+    ],
+    "image_url": "https://placehold.co/200x200/06B6D4/ffffff?text=P028",
+    "emoji": "👕"
+  },
+  {
+    "id": "P029",
+    "title": "Noise ColorFit Pro 5 Smartwatch",
+    "category": "electronics",
+    "subcategory": "wearables",
+    "price": 2499,
+    "attributes": {
+      "battery_days": 7,
+      "gps": true,
+      "heart_rate": true,
+      "waterproof": true
+    },
+    "tags": [
+      "smartwatch",
+      "fitness",
+      "gps",
+      "travel",
+      "wearable",
+      "electronics"
+    ],
+    "image_url": "https://placehold.co/200x200/10B981/ffffff?text=P029",
+    "emoji": "🔋"
+  },
+  {
+    "id": "P030",
+    "title": "Sony WH-1000XM4 Noise Cancelling Headphones",
+    "category": "electronics",
+    "subcategory": "audio",
+    "price": 17990,
+    "attributes": {
+      "noise_cancelling": true,
+      "battery_hours": 30,
+      "foldable": true,
+      "wireless": true
+    },
+    "tags": [
+      "headphones",
+      "noise cancelling",
+      "flight",
+      "travel",
+      "premium",
+      "audio"
+    ],
+    "image_url": "https://placehold.co/200x200/10B981/ffffff?text=P030",
+    "emoji": "🔋"
+  },
+  {
+    "id": "P031",
+    "title": "boAt Rockerz 450 Wireless Headphones",
+    "category": "electronics",
+    "subcategory": "audio",
+    "price": 1299,
+    "attributes": {
+      "noise_cancelling": false,
+      "battery_hours": 15,
+      "foldable": true,
+      "wireless": true
+    },
+    "tags": [
+      "headphones",
+      "wireless",
+      "budget",
+      "travel",
+      "audio"
+    ],
+    "image_url": "https://placehold.co/200x200/10B981/ffffff?text=P031",
+    "emoji": "🔋"
+  },
+  {
+    "id": "P032",
+    "title": "Himalaya Neem Face Wash 100ml",
+    "category": "personal_care",
+    "subcategory": "skincare",
+    "price": 75,
+    "attributes": {
+      "volume_ml": 100,
+      "skin_type": "all",
+      "travel_size": true
+    },
+    "tags": [
+      "face wash",
+      "skincare",
+      "travel size",
+      "personal care",
+      "toiletries"
+    ],
+    "image_url": "https://placehold.co/200x200/EC4899/ffffff?text=P032",
+    "emoji": "🧴"
+  },
+  {
+    "id": "P033",
+    "title": "Dove Moisturizing Body Wash 200ml",
+    "category": "personal_care",
+    "subcategory": "body_care",
+    "price": 199,
+    "attributes": {
+      "volume_ml": 200,
+      "travel_size": true
+    },
+    "tags": [
+      "body wash",
+      "shower gel",
+      "travel size",
+      "personal care",
+      "toiletries"
+    ],
+    "image_url": "https://placehold.co/200x200/EC4899/ffffff?text=P033",
+    "emoji": "🧴"
+  },
+  {
+    "id": "P034",
+    "title": "Oral-B Travel Manual Toothbrush",
+    "category": "personal_care",
+    "subcategory": "dental",
+    "price": 79,
+    "attributes": {
+      "bristles": "medium",
+      "compact": true,
+      "cap_included": true
+    },
+    "tags": [
+      "toothbrush",
+      "travel",
+      "dental care",
+      "personal care",
+      "toiletries"
+    ],
+    "image_url": "https://placehold.co/200x200/EC4899/ffffff?text=P034",
+    "emoji": "🧴"
+  },
+  {
+    "id": "P035",
+    "title": "Colgate MaxFresh Toothpaste 50g",
+    "category": "personal_care",
+    "subcategory": "dental",
+    "price": 49,
+    "attributes": {
+      "weight_g": 50,
+      "travel_size": true
+    },
+    "tags": [
+      "toothpaste",
+      "travel size",
+      "dental care",
+      "personal care",
+      "toiletries"
+    ],
+    "image_url": "https://placehold.co/200x200/EC4899/ffffff?text=P035",
+    "emoji": "🧴"
+  },
+  {
+    "id": "P036",
+    "title": "Head & Shoulders Anti-Dandruff Shampoo 90ml",
+    "category": "personal_care",
+    "subcategory": "haircare",
+    "price": 99,
+    "attributes": {
+      "volume_ml": 90,
+      "travel_size": true,
+      "hair_type": "all"
+    },
+    "tags": [
+      "shampoo",
+      "travel size",
+      "haircare",
+      "personal care",
+      "toiletries"
+    ],
+    "image_url": "https://placehold.co/200x200/EC4899/ffffff?text=P036",
+    "emoji": "🧴"
+  },
+  {
+    "id": "P037",
+    "title": "Paracetamol 500mg Strip (10 tablets)",
+    "category": "health",
+    "subcategory": "medicine",
+    "price": 25,
+    "attributes": {
+      "tablets": 10,
+      "strength_mg": 500,
+      "use": "fever, headache"
+    },
+    "tags": [
+      "medicine",
+      "paracetamol",
+      "fever",
+      "headache",
+      "health",
+      "travel pharmacy"
+    ],
+    "image_url": "https://placehold.co/200x200/EF4444/ffffff?text=P037",
+    "emoji": "💊"
+  },
+  {
+    "id": "P038",
+    "title": "ORS Electrolyte Sachet (Pack of 10)",
+    "category": "health",
+    "subcategory": "medicine",
+    "price": 59,
+    "attributes": {
+      "sachets": 10,
+      "flavour": "orange"
+    },
+    "tags": [
+      "ORS",
+      "electrolyte",
+      "dehydration",
+      "health",
+      "travel",
+      "hydration"
+    ],
+    "image_url": "https://placehold.co/200x200/EF4444/ffffff?text=P038",
+    "emoji": "💊"
+  },
+  {
+    "id": "P039",
+    "title": "Airline-Approved Transparent Toiletry Bag",
+    "category": "travel",
+    "subcategory": "organization",
+    "price": 199,
+    "attributes": {
+      "capacity_litres": 1,
+      "transparent": true,
+      "tsa_approved": true,
+      "waterproof": true
+    },
+    "tags": [
+      "toiletry bag",
+      "transparent bag",
+      "airport security",
+      "organization",
+      "travel"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P039",
+    "emoji": "🧳"
+  },
+  {
+    "id": "P040",
+    "title": "Eagle Creek Packing Cubes Set (3 pieces)",
+    "category": "travel",
+    "subcategory": "organization",
+    "price": 899,
+    "attributes": {
+      "pieces": 3,
+      "material": "nylon",
+      "sizes": [
+        "small",
+        "medium",
+        "large"
+      ]
+    },
+    "tags": [
+      "packing cubes",
+      "luggage organizer",
+      "travel",
+      "organization",
+      "packing"
+    ],
+    "image_url": "https://placehold.co/200x200/3B82F6/ffffff?text=P040",
+    "emoji": "🧳"
+  }
+]

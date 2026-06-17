@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic AI Developer — 12-Week Roadmap</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root{
+    --bg:#0e0d0b;
+    --panel:#16140f;
+    --ink:#f2ead9;
+    --muted:#9a907c;
+    --line:#2d2a22;
+    --amber:#e8a13a;
+    --rust:#d35a3a;
+    --moss:#8aa05a;
+    --done:#5b7c3a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Fraunces',serif;
+    line-height:1.55;
+    background-image:radial-gradient(circle at 15% -10%,rgba(232,161,58,.10),transparent 45%),radial-gradient(circle at 90% 5%,rgba(211,90,58,.08),transparent 40%);
+    min-height:100vh;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:56px 28px 120px}
+
+  header{margin-bottom:44px;position:relative}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+  h1{font-size:clamp(40px,8vw,82px);font-weight:900;line-height:.95;letter-spacing:-.02em;font-optical-sizing:144}
+  h1 em{font-style:italic;color:var(--rust);font-weight:500}
+  .sub{margin-top:22px;font-size:18px;color:var(--muted);max-width:620px;font-style:italic}
+  .stamp{margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);border-left:2px solid var(--moss);padding-left:12px}
+
+  .progressbar{position:sticky;top:0;z-index:50;background:rgba(14,13,11,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:0 -28px 40px;padding:14px 28px;display:flex;align-items:center;gap:16px}
+  .track{flex:1;height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+  .fill{height:100%;width:0;background:linear-gradient(90deg,var(--moss),var(--amber));border-radius:99px;transition:width .4s cubic-bezier(.4,0,.2,1)}
+  .pct{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--amber);min-width:42px;text-align:right}
+
+  .week{margin-bottom:14px;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden;transition:border-color .3s}
+  .week:hover{border-color:#403c30}
+  .whead{display:flex;align-items:baseline;gap:18px;padding:24px 28px;cursor:pointer;user-select:none;position:relative}
+  .wnum{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--amber);font-weight:600;white-space:nowrap}
+  .wtitle{font-size:25px;font-weight:600;letter-spacing:-.01em;flex:1}
+  .wmeta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+  .chev{transition:transform .3s;color:var(--muted);font-size:14px}
+  .week.open .chev{transform:rotate(90deg)}
+  .wbody{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+  .wbody-inner{padding:4px 28px 28px}
+
+  .phase-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-bottom:18px}
+  .p-found{background:rgba(232,161,58,.14);color:var(--amber)}
+  .p-core{background:rgba(138,160,90,.16);color:var(--moss)}
+  .p-prod{background:rgba(211,90,58,.16);color:var(--rust)}
+
+  ul.topics{list-style:none}
+  ul.topics li{display:flex;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+  ul.topics li:last-child{border-bottom:none}
+  .cb{appearance:none;width:20px;height:20px;border:1.5px solid #4a463a;border-radius:6px;flex-shrink:0;margin-top:3px;cursor:pointer;position:relative;transition:.2s}
+  .cb:checked{background:var(--done);border-color:var(--done)}
+  .cb:checked::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-family:sans-serif}
+  .cb:checked + .ctext{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--moss)}
+  .ctext{font-size:16.5px;transition:.2s}
+
+  .agent{margin-top:22px;padding:18px 20px;background:rgba(211,90,58,.06);border-left:3px solid var(--rust);border-radius:0 10px 10px 0}
+  .agent .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:6px}
+  .agent .desc{font-size:16px;font-style:italic;color:var(--ink)}
+
+  .capstone{margin-top:40px;padding:34px;border:1px solid var(--amber);border-radius:16px;background:linear-gradient(135deg,rgba(232,161,58,.08),rgba(211,90,58,.05))}
+  .capstone h3{font-size:30px;font-weight:900;margin-bottom:8px}
+  .capstone .opt{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+  .capstone .opt:last-of-type{border-bottom:none}
+  .capstone strong{color:var(--amber);font-weight:600}
+
+  .edge{margin-top:40px;padding:30px;border:1px dashed var(--moss);border-radius:16px;background:rgba(138,160,90,.05)}
+  .edge h3{font-size:24px;font-weight:600;margin-bottom:12px;color:var(--moss)}
+  .edge p{color:var(--ink);font-size:16.5px;margin-bottom:10px}
+  .edge p:last-child{margin-bottom:0}
+
+  .day-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);margin:18px 0 4px;display:block}
+
+  .ide{margin-top:40px;padding:34px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+  .ide h3{font-size:30px;font-weight:900;margin-bottom:6px}
+  .ide .sub2{color:var(--muted);font-style:italic;margin-bottom:22px}
+  .ide h4{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin:24px 0 10px}
+  .ide ul{list-style:none}
+  .ide li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:16.5px}
+  .ide li:last-child{border-bottom:none}
+  .ide strong{color:var(--ink);font-weight:600}
+  .ide .pick{color:var(--moss);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-left:6px}
+  .ide code{font-family:'JetBrains Mono',monospace;font-size:14px;background:rgba(232,161,58,.1);color:var(--amber);padding:1px 6px;border-radius:4px}
+
+  .controls{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+  button.ctrl{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;background:transparent;color:var(--muted);border:1px solid var(--line);padding:10px 18px;border-radius:8px;cursor:pointer;transition:.2s}
+  button.ctrl:hover{color:var(--ink);border-color:var(--muted)}
+
+  footer{margin-top:60px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="progressbar">
+    <span class="wmeta" style="font-weight:600;color:var(--ink)">PROGRESS</span>
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <span class="pct" id="pct">0%</span>
+  </div>
+
+  <header>
+    <div class="kicker">From Drupal to Agents · 12 Weeks</div>
+    <h1>Becoming an<br><em>Agentic AI</em><br>Developer</h1>
+    <p class="sub">A backend engineer's pivot. Built to lean on what 15 years of PHP &amp; Drupal already taught you — APIs, queues, data modeling, shipping reliable systems.</p>
+    <div class="stamp">tip → check boxes to track progress · saved in this browser · click any week to expand</div>
+  </header>
+
+  <div id="weeks"></div>
+
+  <div class="capstone">
+    <h3>Week 12 · Capstone</h3>
+    <p style="color:var(--muted);font-style:italic;margin-bottom:18px">Build one end-to-end system: RAG + multi-step + tools + production hygiene. Pick something that uses your domain edge.</p>
+    <div class="opt"><input type="checkbox" class="cb" data-id="cap1"><span class="ctext"><strong>Drupal migration assistant</strong> — analyzes an old site, plans the migration, generates config &amp; code suggestions.</span></div>
+    <div class="opt"><input type="checkbox" class="cb" data-id="cap2"><span class="ctext"><strong>Codebase Q&amp;A agent</strong> — ingests a PHP repo, answers architecture questions, suggests refactors.</span></div>
+    <div class="opt"><input type="checkbox" class="cb" data-id="cap3"><span class="ctext"><strong>CMS content-ops agent</strong> — auto-tags, summarizes, generates SEO metadata, schedules publishing via API.</span></div>
+  </div>
+
+  <div class="edge">
+    <h3>Where your 15 years actually win</h3>
+    <p>API design, queues/async, database modeling (vector DBs are still DBs), auth, and production reliability all transfer directly — and they're exactly where AI-first devs tend to be weak. Your edge is shipping reliable systems, not just calling an LLM.</p>
+    <p><strong style="color:var(--amber)">One real barrier:</strong> lean into Python early. It's the obstacle, not the AI concepts. Spend a focused week on async, Pydantic, and FastAPI before Week 5 and the rest gets much smoother.</p>
+  </div>
+
+  <div class="ide">
+    <h3>IDE &amp; Tooling Setup</h3>
+    <p class="sub2">Two solid paths. Pick one and don't agonize — both are excellent for Python + AI work.</p>
+
+    <h4>The Editor</h4>
+    <ul>
+      <li><strong>VS Code</strong> <span class="pick">recommended start</span> — free, huge ecosystem, what most AI tutorials assume. Lightest jump if you've used it for PHP.</li>
+      <li><strong>Cursor</strong> <span class="pick">AI-native</span> — a VS Code fork with built-in AI coding (great while you're learning; it explains code inline). Many agent devs live here.</li>
+      <li><strong>PyCharm</strong> (Community = free) — heavier, but the best pure-Python intelligence and debugger. Closest feel to a full IDE like PhpStorm, which you likely know.</li>
+    </ul>
+
+    <h4>Essential VS Code / Cursor extensions</h4>
+    <ul>
+      <li><strong>Python</strong> (Microsoft) — the core: IntelliSense, debugging, env selection.</li>
+      <li><strong>Pylance</strong> — fast type checking &amp; autocomplete (ships with the Python ext).</li>
+      <li><strong>Ruff</strong> — lint + format on save; replaces black/flake8/isort. Pairs with the <code>ruff</code> CLI.</li>
+      <li><strong>Mypy Type Checker</strong> — surfaces type errors inline (matters once you're deep in Pydantic).</li>
+      <li><strong>Even Better TOML</strong> — for editing <code>pyproject.toml</code>.</li>
+      <li><strong>autoDocstring</strong> — generates docstring scaffolds.</li>
+      <li><strong>GitLens</strong> — if you used it for PHP, same value here.</li>
+      <li><strong>DotENV</strong> — syntax highlighting for <code>.env</code> files.</li>
+    </ul>
+
+    <h4>Configure once, save headaches</h4>
+    <ul>
+      <li>Set <strong>format-on-save</strong> with Ruff as the default formatter.</li>
+      <li>Always <strong>select the right interpreter</strong> — point VS Code at your <code>uv</code> / venv Python, not the system one. (The #1 "why won't it import" confusion.)</li>
+      <li>Enable <strong>type-checking mode: basic</strong> in Pylance settings to start catching bugs early.</li>
+    </ul>
+  </div>
+
+  <div class="controls">
+    <button class="ctrl" id="expandAll">Expand all</button>
+    <button class="ctrl" id="collapseAll">Collapse all</button>
+    <button class="ctrl" id="reset">Reset progress</button>
+  </div>
+
+  <footer>SHIP RELIABLE AGENTS · MADE FOR A BACKEND VETERAN</footer>
+</div>
+
+<script>
+const data = [
+  {n:"Week 00",t:"Python Prep — PHP Brain to Python Brain",phase:["Pre-flight","p-found"],meta:"~1 week",
+   days:[
+     ["Day 1 · Setup & idioms",[
+       "Install uv (replaces pip + venv + pyenv); create your first project & virtual env",
+       "Indentation as blocks, no $/->/::, dict[\"key\"] vs obj.attr",
+       "None vs null, is None vs == None, truthiness of [] {} 0 \"\""
+     ]],
+     ["Day 2 · The Pythonic core",[
+       "f-strings: f\"total {price:.2f}\" — forget % and .format()",
+       "Comprehensions: [x*2 for x in items if x>0] replaces array_map/array_filter",
+       "Unpacking: a,b = b,a · first,*rest · *args / **kwargs · func(**dict)",
+       "enumerate() and zip() instead of manual counters"
+     ]],
+     ["Day 3 · Gotchas & structure",[
+       "References not copies — mutable default arg bug, copy.deepcopy",
+       "with (context managers) for files, connections, locks",
+       "if __name__ == \"__main__\": guard; dunder methods (__init__, __repr__)",
+       "pyproject.toml as your composer.json equivalent"
+     ]],
+     ["Day 4 · Types & async",[
+       "Type hints: def f(name: str, count: int = 0) -> list[str]",
+       "async / await and asyncio — critical for agents",
+       "httpx for async HTTP calls (not the older sync requests)"
+     ]],
+     ["Day 5 · Pydantic (learn this well)",[
+       "Define typed models that validate at runtime — like Drupal entity/form validation for any data",
+       "Used everywhere in AI libs for structured outputs & tool schemas",
+       "Nested models, validators, .model_dump() / .model_validate()"
+     ]],
+     ["Day 6 · FastAPI + stdlib",[
+       "Build a tiny FastAPI endpoint (your backend experience shines here)",
+       "Auto-generated /docs, dependency injection basics",
+       "Stdlib to know: pathlib, json, datetime, collections, dataclasses, logging"
+     ]],
+     ["Day 7 · Tooling & a real mini-project",[
+       "ruff (lint+format), pytest (tests), mypy (static types)",
+       "python-dotenv for .env API keys",
+       "Ship a tiny FastAPI service that calls an LLM SDK and returns a Pydantic-validated response"
+     ]]
+   ]},
+  {n:"Week 01–02",t:"Foundations & LLM Mechanics",phase:["Foundations","p-found"],meta:"2 weeks",
+   topics:[
+     "How LLMs work: tokens, context windows, temperature, system vs user prompts",
+     "Prompt engineering: few-shot, chain-of-thought, structured (JSON) output",
+     "API basics: OpenAI, Anthropic, and open models via Ollama (local)",
+     "Embeddings & what vector similarity actually means",
+     "Python setup — async, type hints, virtualenvs (your PHP sense transfers)"
+   ],
+   agent:"CLI tool that summarizes any URL you paste, with adjustable tone via system prompt."},
+  {n:"Week 03–04",t:"RAG — Retrieval-Augmented Generation",phase:["Foundations","p-found"],meta:"2 weeks",
+   topics:[
+     "Chunking strategies & embedding models",
+     "Vector DBs: Chroma, Qdrant, pgvector (pgvector ≈ familiar MySQL territory)",
+     "Semantic vs keyword vs hybrid search",
+     "Reranking, context stuffing, citation handling",
+     "Evaluation: faithfulness & relevance — how do you know RAG is good?"
+   ],
+   agent:'"Chat with your Drupal docs" bot — ingest docs, answer with sources. Uses your domain knowledge.'},
+  {n:"Week 05–06",t:"Agent Frameworks & Tool Use",phase:["Core Agentics","p-core"],meta:"2 weeks",
+   topics:[
+     "The agentic loop: reason → act → observe → repeat",
+     "Function/tool calling — how the model decides to invoke your code",
+     "Frameworks: LangChain/LangGraph, LlamaIndex, PydanticAI (start raw, then framework)",
+     "ReAct pattern; planning vs reactive agents"
+   ],
+   agent:"Agent that manages a todo list via tools (add, complete, query) from natural-language commands."},
+  {n:"Week 07–08",t:"Multi-Step & Multi-Agent Systems",phase:["Core Agentics","p-core"],meta:"2 weeks",
+   topics:[
+     "Orchestration: sequential, parallel, hierarchical agents",
+     "State & memory: short-term context vs long-term stores",
+     "Agent-to-agent communication; supervisor/worker patterns",
+     "Frameworks: LangGraph (state machines), CrewAI, AutoGen",
+     "Human-in-the-loop checkpoints"
+   ],
+   agent:"Content pipeline — one agent researches, one drafts, one edits/fact-checks. Mirrors editorial CMS workflows."},
+  {n:"Week 09–10",t:"Production Concerns",phase:["Production","p-prod"],meta:"2 weeks",
+   topics:[
+     "Observability: tracing (LangSmith, Langfuse), logging agent decisions",
+     "Cost control, caching, rate limiting, token budgeting",
+     "Guardrails: input validation, output filtering, prompt-injection defense",
+     "Evaluation harnesses & regression testing for non-deterministic systems",
+     "Reliability patterns: retries, fallbacks, structured-output validation"
+   ],
+   agent:"Customer-support triage agent with logging, guardrails, and human-escalation fallback."},
+  {n:"Week 11",t:"Protocols & Integration",phase:["Production","p-prod"],meta:"1 week",
+   topics:[
+     "Model Context Protocol (MCP) — standardized tool/data connections",
+     "Connecting agents to real systems: APIs, databases, webhooks",
+     "Deployment: containers, serverless vs long-running, queues for async (your strength)"
+   ],
+   agent:"An MCP server exposing a Drupal site's content as tools any agent can query."}
+];
+
+const weeksEl = document.getElementById('weeks');
+data.forEach((w,i)=>{
+  let inner;
+  if(w.days){
+    const blocks = w.days.map((d,di)=>{
+      const items = d[1].map((tp,j)=>{
+        const id = `w${i}_${di}_${j}`;
+        return `<li><input type="checkbox" class="cb" data-id="${id}"><span class="ctext">${tp}</span></li>`;
+      }).join('');
+      return `<span class="day-label">${d[0]}</span><ul class="topics">${items}</ul>`;
+    }).join('');
+    inner = `<span class="phase-tag ${w.phase[1]}">${w.phase[0]}</span>${blocks}`;
+  } else {
+    const topics = w.topics.map((tp,j)=>{
+      const id = `w${i}_${j}`;
+      return `<li><input type="checkbox" class="cb" data-id="${id}"><span class="ctext">${tp}</span></li>`;
+    }).join('');
+    inner = `<span class="phase-tag ${w.phase[1]}">${w.phase[0]}</span>
+        <ul class="topics">${topics}</ul>
+        <div class="agent"><div class="lbl">Sample Agent</div><div class="desc">${w.agent}</div></div>`;
+  }
+  weeksEl.insertAdjacentHTML('beforeend',`
+    <div class="week" id="week${i}">
+      <div class="whead" onclick="toggle(${i})">
+        <span class="wnum">${w.n}</span>
+        <span class="wtitle">${w.t}</span>
+        <span class="wmeta">${w.meta}</span>
+        <span class="chev">▶</span>
+      </div>
+      <div class="wbody"><div class="wbody-inner">${inner}</div></div>
+    </div>`);
+});
+
+const store = {};
+function toggle(i){
+  const el = document.getElementById('week'+i);
+  el.classList.toggle('open');
+  const body = el.querySelector('.wbody');
+  body.style.maxHeight = el.classList.contains('open') ? body.scrollHeight+'px' : '0';
+}
+function save(){ try{ localStorage.setItem('agenticProgress',JSON.stringify(store)); }catch(e){} }
+function load(){ try{ const s=localStorage.getItem('agenticProgress'); if(s) Object.assign(store,JSON.parse(s)); }catch(e){} }
+function updateBar(){
+  const boxes=document.querySelectorAll('.cb');
+  const done=[...boxes].filter(b=>b.checked).length;
+  const pct=boxes.length?Math.round(done/boxes.length*100):0;
+  document.getElementById('fill').style.width=pct+'%';
+  document.getElementById('pct').textContent=pct+'%';
+}
+
+load();
+document.querySelectorAll('.cb').forEach(b=>{
+  const id=b.dataset.id;
+  if(store[id]) b.checked=true;
+  b.addEventListener('change',()=>{ store[id]=b.checked; save(); updateBar(); });
+});
+updateBar();
+
+document.getElementById('expandAll').onclick=()=>data.forEach((_,i)=>{const el=document.getElementById('week'+i);if(!el.classList.contains('open'))toggle(i);});
+document.getElementById('collapseAll').onclick=()=>data.forEach((_,i)=>{const el=document.getElementById('week'+i);if(el.classList.contains('open'))toggle(i);});
+document.getElementById('reset').onclick=()=>{ if(confirm('Reset all progress?')){ for(const k in store)delete store[k]; save(); document.querySelectorAll('.cb').forEach(b=>b.checked=false); updateBar(); } };
+
+toggle(0);
+</script>
+</body>
+</html>
