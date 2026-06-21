@@ -3,7 +3,7 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
 from langchain_core.messages import AIMessage, HumanMessage
 
 st.set_page_config(

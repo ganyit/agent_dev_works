@@ -17,7 +17,7 @@ from pathlib import Path
 
 import httpx
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
 
 # Ensure UTF-8 output on Windows so symbols render correctly
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
