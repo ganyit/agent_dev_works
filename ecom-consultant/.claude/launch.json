@@ -5,8 +5,7 @@
       "name": "shopsmart",
       "runtimeExecutable": "streamlit",
       "runtimeArgs": ["run", "app.py", "--server.headless", "true"],
-      "port": 8502,
-      "autoPort": true
+      "port": 8501
     }
   ]
 }
