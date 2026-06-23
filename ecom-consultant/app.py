@@ -145,6 +145,58 @@ st.markdown("""
     background: transparent !important;
 }
 
+/* ── Token usage panel ── */
+.token-panel {
+    background: linear-gradient(135deg, #f0f4ff, #e8f5e9);
+    border: 1px solid #c7d2fe;
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin-top: 16px;
+}
+.token-panel-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #3730a3;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.token-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.token-label {
+    font-size: 0.78rem;
+    color: #555;
+}
+.token-value {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+.token-bar-wrap {
+    background: #dde3f0;
+    border-radius: 8px;
+    height: 7px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.token-bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    transition: width 0.4s ease;
+}
+.token-footnote {
+    font-size: 0.70rem;
+    color: #888;
+    margin-top: 6px;
+    text-align: center;
+}
+
 /* ── Suggested chips ── */
 .chip-row {
     display: flex;
@@ -175,6 +227,8 @@ if "lc_history" not in st.session_state:
     st.session_state.lc_history = []
 if "cart" not in st.session_state:
     st.session_state.cart = {}
+if "token_totals" not in st.session_state:
+    st.session_state.token_totals = {"input_tokens": 0, "output_tokens": 0, "searches": 0}
 
 # ---------------------------------------------------------------------------
 # Layout: left settings strip (sidebar) | centre chat | right cart
@@ -222,6 +276,7 @@ with st.sidebar:
     if st.button("🗑️ Clear conversation", use_container_width=True):
         st.session_state.messages = []
         st.session_state.lc_history = []
+        st.session_state.token_totals = {"input_tokens": 0, "output_tokens": 0, "searches": 0}
         st.rerun()
 
 # ---------------------------------------------------------------------------
@@ -341,11 +396,68 @@ with chat_col:
         with st.chat_message("assistant"):
             with st.spinner("Searching eBay for the best picks…"):
                 from agent import chat as agent_chat
-                reply, updated_history, products = agent_chat(prompt, st.session_state.lc_history)
+                reply, updated_history, products, token_usage = agent_chat(prompt, st.session_state.lc_history)
             st.markdown(reply)
             if products:
                 st.markdown("---")
                 _render_product_grid(products, key_prefix="latest")
 
+        # Accumulate token usage
+        st.session_state.token_totals["input_tokens"] += token_usage["input_tokens"]
+        st.session_state.token_totals["output_tokens"] += token_usage["output_tokens"]
+        if products:
+            st.session_state.token_totals["searches"] += 1
+
         st.session_state.lc_history = updated_history
         st.session_state.messages.append({"role": "assistant", "content": reply, "products": products})
+
+# ---------------------------------------------------------------------------
+# AI Usage meter — rendered AFTER chat processing so values are current
+# ---------------------------------------------------------------------------
+def _fmt_pages(tokens: int) -> str:
+    """Format tokens as pages with one decimal when < 1 full page."""
+    pages = tokens / 500
+    if pages == 0:
+        return "0 pages"
+    if pages < 1:
+        return f"~{pages:.1f} pages"
+    return f"~{round(pages)} page{'s' if round(pages) != 1 else ''}"
+
+with cart_col:
+    _tok = st.session_state.token_totals
+    _total_tok = _tok["input_tokens"] + _tok["output_tokens"]
+    _searches = _tok["searches"]
+    _cost_usd = _tok["input_tokens"] * 0.00000015 + _tok["output_tokens"] * 0.0000006
+    _cost_cents = _cost_usd * 100
+    _cost_display = f"${_cost_usd:.4f}" if _cost_cents >= 100 else f"{_cost_cents:.2f}¢"
+    _bar_pct = min(100, int(_total_tok / 100))
+
+    st.markdown(f"""
+    <div class="token-panel">
+        <div class="token-panel-title">🧠 AI Brain Activity — this session</div>
+        <div class="token-stat-row">
+            <span class="token-label">📖 Context read by AI</span>
+            <span class="token-value">{_tok["input_tokens"]:,} tokens</span>
+        </div>
+        <div class="token-stat-row">
+            <span class="token-label">✍️ Responses written</span>
+            <span class="token-value">{_tok["output_tokens"]:,} tokens</span>
+        </div>
+        <div class="token-stat-row">
+            <span class="token-label">🔍 eBay searches run</span>
+            <span class="token-value">{_searches} search{'es' if _searches != 1 else ''}</span>
+        </div>
+        <div class="token-bar-wrap">
+            <div class="token-bar-fill" style="width:{_bar_pct}%"></div>
+        </div>
+        <div class="token-stat-row">
+            <span class="token-label">⚡ Raw AI tokens used</span>
+            <span class="token-value">{_total_tok:,}</span>
+        </div>
+        <div class="token-stat-row">
+            <span class="token-label">💰 Estimated AI cost</span>
+            <span class="token-value">{_cost_display}</span>
+        </div>
+        <div class="token-footnote">Tokens = the units AI models count text in. ~500 tokens ≈ 1 book page.</div>
+    </div>
+    """, unsafe_allow_html=True)

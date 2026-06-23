@@ -343,8 +343,20 @@ graph = graph_builder.compile()
 # Chat runner
 # ---------------------------------------------------------------------------
 
-def chat(user_input: str, history: list) -> tuple[str, list, list[dict]]:
-    """Send a message and return (assistant_reply, updated_history, products_shown)."""
+def _sum_token_usage(messages: list) -> dict:
+    """Sum token usage across all AIMessage responses in a turn."""
+    input_tokens = 0
+    output_tokens = 0
+    for msg in messages:
+        if isinstance(msg, AIMessage):
+            usage = (msg.response_metadata or {}).get("token_usage", {})
+            input_tokens += usage.get("prompt_tokens", 0)
+            output_tokens += usage.get("completion_tokens", 0)
+    return {"input_tokens": input_tokens, "output_tokens": output_tokens}
+
+
+def chat(user_input: str, history: list) -> tuple[str, list, list[dict], dict]:
+    """Send a message and return (assistant_reply, updated_history, products_shown, token_usage)."""
     global _turn_products
     _turn_products = []
     history = history + [HumanMessage(content=user_input)]
@@ -355,7 +367,8 @@ def chat(user_input: str, history: list) -> tuple[str, list, list[dict]]:
         if isinstance(msg, AIMessage) and not msg.tool_calls:
             reply = msg.content
             break
-    return reply, updated, list(_turn_products)
+    token_usage = _sum_token_usage(updated)
+    return reply, updated, list(_turn_products), token_usage
 
 
 def run_cli():
@@ -372,7 +385,7 @@ def run_cli():
         if user_input.lower() in ("exit", "quit", "bye"):
             print("Consultant: Happy shopping! Goodbye!")
             break
-        reply, history, _ = chat(user_input, history)
+        reply, history, _, _usage = chat(user_input, history)
         print(f"\nConsultant: {reply}\n")
 
 
